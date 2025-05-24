@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список пользователей</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 0.5rem; border: 1px solid #ccc; }
+    th { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h1>Пользователи</h1>
+  <table id="users-table">
+    <thead>
+      <tr><th>ID</th><th>Имя</th><th>Email</th></tr>
+    </thead>
+    <tbody>
+       Данные будут вставлены сюда -->
+    </tbody>
+  </table>
+
+  <form action="">
+    <div class="email">
+      <input type="email" placeholder="Ввелите email...">
+    </div>
+    <div class="password">
+      <input type="password" placeholder="Ввелите password...">
+    </div>
+    <button id="btn">Войти</button>
+  </form>
+
+
+  <script>
+    // При загрузке страницы запрашиваем JSON и вставляем в таблицу:
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('/api/users')
+        .then(res => res.json())
+        .then(users => {
+          const tbody = document.querySelector('#users-table tbody');
+          users.forEach(user => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${user.id}</td>
+              <td>${user.name}</td>
+              <td>${user.email}</td>
+            `;
+            tbody.append(row);
+          });
+        })
+        .catch(err => console.error('Fetch error:', err));
+    });
+  </script>
+</body>
+</html> 
