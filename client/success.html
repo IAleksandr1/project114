@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Фото слайд-шоу с боковыми превью</title>
-    <link rel="stylesheet" href="successCSS.css" />
+    <link rel="stylesheet" href="style/successCSS.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <script src="js/app.js"></script>
   </head>
   <body>
     <header>
@@ -16,18 +17,17 @@
         <a href="#" class="logo">
           <div class="logo-text" id="">114Б production</div>
         </a>
-
         <nav>
           <ul>
-            <li><a href="#main">Главная</a></li>
+            <li><a href="#">Главная</a></li>
             <li><a href="#gallery">Галерея</a></li>
             <li><a href="#info">Информация</a></li>
             <li><a href="#contacts">Контакты</a></li>
+            <li><a href="login.html">Выход</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <br id="main" />
     <section class="hero-section">
       <div class="hero-bg"></div>
       <div class="hero-content">
@@ -37,7 +37,7 @@
             Команда студентов-программистов МГУ им. Огарёва. Мы создаем
             инновационные решения и развиваемся в сфере IT.
           </p>
-          <a href="#team" class="hero-btn">Узнать о команде</a>
+          <a href="#gallery" class="hero-btn">Узнать о команде</a>
         </div>
       </div>
     </section>
@@ -49,9 +49,7 @@
         <img src="" alt="Предыдущее фото" id="prev-slide" />
       </div>
 
-      <div class="main-slide">
-        <!-- Все фото будут добавлены через JavaScript -->
-      </div>
+      <div class="main-slide"></div>
 
       <div class="side-slide right">
         <img src="" alt="Следующее фото" id="next-slide" />
@@ -61,9 +59,7 @@
     <br id="info" />
     <br />
 
-    <div class="info-container" id="inf">
-      <!-- Информация будет добавляться через JavaScript -->
-    </div>
+    <div class="info-container" id="inf"></div>
 
     <footer id="contacts">
       <div class="footer-container">
@@ -80,9 +76,7 @@
                     <a href="https://vk.com/ialeksandrx" target="_blank"
                       ><i class="fab fa-vk"></i
                     ></a>
-                    <a
-                      href="https://web.telegram.org/k/#@ChatGPT_General_Bot"
-                      target="_blank"
+                    <a href="https://t.me/aIeksandrx" target="_blank"
                       ><i class="fab fa-telegram"></i
                     ></a>
                   </div>
@@ -104,9 +98,7 @@
                       target="_blank"
                       ><i class="fab fa-vk"></i
                     ></a>
-                    <a
-                      href="https://web.telegram.org/k/#@agressivekata"
-                      target="_blank"
+                    <a href="https://t.me/agressivekata" target="_blank"
                       ><i class="fab fa-telegram"></i
                     ></a>
                   </div>
@@ -121,9 +113,10 @@
                   <p><i class="fas fa-envelope"></i> zlata@students114.ru</p>
                   <p><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</p>
                   <div class="social-links">
-                    <a
-                      href="https://web.telegram.org/k/#@Skkkkkkkkks"
-                      target="_blank"
+                    <a href="https://vk.com/id711718865" target="_blank"
+                      ><i class="fab fa-vk"></i
+                    ></a>
+                    <a href="https://t.me/Skkkkkkkkks" target="_blank"
                       ><i class="fab fa-telegram"></i
                     ></a>
                   </div>
@@ -134,15 +127,8 @@
 
           <div class="footer-column">
             <h3>Контакты</h3>
-            <p><i class="fas fa-envelope"></i> team@students114.ru</p>
-            <p><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-vk"></i></a>
-              <a href="#"><i class="fab fa-telegram"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-            </div>
+            <div class="footer-column id-contact" id="id_contact"></div>
           </div>
-
           <div class="footer-column">
             <h3>Навигация</h3>
             <a href="#">Главная</a>
@@ -151,193 +137,8 @@
             <a href="#contact">Контакты</a>
           </div>
         </div>
-
         <div class="copyright">© 2025 114Б production. Все права защищены.</div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const slides = [
-          {
-            image: "imgs/саша.jpg",
-            title: "Симанов Александр",
-            description: `
-                        <div class="form-row">
-                            <div class="form-group">
-                                <img src="imgs/саша.jpg" width="250" class="img"> 
-                            </div> 
-                            <div class="form-group"  id="form-group1">
-                                <h1 class="border-1">Симанов Александр</h1>
-                                <p class="img1"><br> Учусь на <em>программиста</em> в <strong>МГУ им.Огарёва</strong>.</p>
-                                <hr>
-                                <p class="img1"><strong>Список социальных сетей:</strong></p>
-                                <a href="https://vk.com/ialeksandrx" target="_blank" class="button">Вконтакте</a>
-                                |
-                                <a href="https://web.telegram.org/k/#@ChatGPT_General_Bot" target="_blank" class="button">Telegram</a>
-                                <hr>
-                            </div>
-                        </div>
-                        <div class="border-2">
-                            <h2>Мои Хобби</h2>
-                            <ol>
-                                <li>Занимаюсь футболом</li>
-                                <li>Занимаюсь волейболом</li>
-                                <li>Учусь в МГУ</li>
-                            </ol>
-                        </div>
-                    `,
-          },
-          {
-            image: "imgs/лиза.jpg",
-            title: "Родайкина Елизавета",
-            description: `
-                        <div class="form-row">
-                            <div class="form-group">
-                                <img src="imgs/лиза.jpg" width="250" class="img"> 
-                            </div> 
-                            <div class="form-group" id="form-group1">
-                                <h1 class="liza1">Родайкина Елизавета</h1>
-                                <p class="img1"><br> Учусь на <em>программиста</em> в <strong>МГУ им.Огарёва</strong>.</p>
-                                <hr>
-                                <p class="img1"><strong>Список социальных сетей:</strong></p>
-                                <a href="https://vk.com/lizochka.best.rodaykina" target="_blank" class="button">Вконтакте</a>
-                                |
-                                <a href="https://web.telegram.org/k/#@agressivekata" class="button" target="_blank">Telegram</a>
-                                <hr>
-                            </div>
-                        </div>
-                        <div class="border-2">
-                            <h2>Мои Хобби</h2>
-                            <ol>
-                                <li>Занимаюсь футболом</li>
-                                <li>Занимаюсь волейболом</li>
-                                <li>Учусь в МГУ</li>
-                            </ol>
-                        </div>
-                    `,
-          },
-          {
-            image: "imgs/николавнa.jpg",
-            title: "Скворцова Злата",
-            description: `
-                        <div class="form-row">
-                            <div class="form-group">
-                                <img src="imgs/николавнa.jpg" width="250" class="img"> 
-                            </div> 
-                            <div class="form-group" id="form-group1">
-                                <h1 class="border-1">Скворцова Злата</h1>
-                                <p class="img1"><br> Учусь на <em>программиста</em> в <strong>МГУ им.Огарёва</strong>.</p>
-                                <hr>
-                                <p class="img1"><strong>Список социальных сетей:</strong></p>
-                                <a href="" target="_blank" class="button">Вконтакте</a>
-                                |
-                                <a href="https://web.telegram.org/k/#@Skkkkkkkkks" class="button" target="_blank">Telegram</a>
-                                <hr>
-                            </div>
-                        </div>
-                        <div class="border-2">
-                            <h2>Мои Хобби</h2>
-                            <ol>
-                                <li>Занимаюсь футболом</li>
-                                <li>Занимаюсь волейболом</li>
-                                <li>Учусь в МГУ</li>
-                            </ol>
-                        </div>
-                    `,
-          },
-        ];
-
-        let currentSlide = 0;
-        const mainSlide = document.querySelector(".main-slide");
-        const prevSlideImg = document.getElementById("prev-slide");
-        const nextSlideImg = document.getElementById("next-slide");
-        const infoContainer = document.querySelector(".info-container");
-
-        // Инициализация слайдов
-        function initSlides() {
-          // Очищаем основной слайд
-          mainSlide.innerHTML = "";
-
-          // Добавляем все изображения в основной слайд
-          slides.forEach((slide, index) => {
-            const img = document.createElement("img");
-            img.src = slide.image;
-            img.alt = slide.title;
-            img.dataset.index = index;
-            if (index === 0) img.classList.add("active");
-            mainSlide.appendChild(img);
-          });
-
-          // Обновляем боковые превью
-          updateSidePreviews();
-          // Обновляем информацию
-          updateInfo();
-        }
-
-        // Обновление боковых превью
-        function updateSidePreviews() {
-          const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
-          const nextIndex = (currentSlide + 1) % slides.length;
-
-          prevSlideImg.src = slides[prevIndex].image;
-          nextSlideImg.src = slides[nextIndex].image;
-        }
-
-        // Обновление информации
-        function updateInfo() {
-          // Удаляем старую информацию
-          const oldInfo = document.querySelector(".info-content");
-          if (oldInfo) oldInfo.remove();
-
-          // Создаем новую информацию
-          const infoContent = document.createElement("div");
-          infoContent.className = "info-content active";
-          infoContent.innerHTML = `
-                    ${slides[currentSlide].description}
-                `;
-
-          infoContainer.insertBefore(infoContent, infoContainer.firstChild);
-        }
-
-        // Переключение слайда
-        function changeSlide(newIndex) {
-          // Проверяем, чтобы индекс был в пределах массива
-          newIndex = (newIndex + slides.length) % slides.length;
-
-          // Плавное скрытие текущего слайда
-          const currentImg = document.querySelector(
-            `.main-slide img[data-index="${currentSlide}"]`
-          );
-          currentImg.classList.remove("active");
-
-          // Плавное отображение нового слайда
-          const newImg = document.querySelector(
-            `.main-slide img[data-index="${newIndex}"]`
-          );
-          newImg.classList.add("active");
-
-          currentSlide = newIndex;
-          updateSidePreviews();
-          updateInfo();
-        }
-
-        // Обработчики событий
-        document
-          .querySelector(".side-slide.left")
-          .addEventListener("click", () => {
-            changeSlide(currentSlide - 1);
-          });
-
-        document
-          .querySelector(".side-slide.right")
-          .addEventListener("click", () => {
-            changeSlide(currentSlide + 1);
-          });
-
-        // Инициализация
-        initSlides();
-      });
-    </script>
   </body>
 </html>
